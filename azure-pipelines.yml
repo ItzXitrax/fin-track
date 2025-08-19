@@ -1,0 +1,82 @@
+# Azure DevOps Pipeline para Fin Track
+trigger:
+  - main
+  - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  nodeVersion: '18.x'
+  npmVersion: '9.x'
+
+stages:
+- stage: Build
+  displayName: 'Build y Test'
+  jobs:
+  - job: Build
+    displayName: 'Construir Aplicación'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: $(nodeVersion)
+      displayName: 'Instalar Node.js'
+
+    - task: Npm@1
+      inputs:
+        command: 'install'
+        workingDir: '$(System.DefaultWorkingDirectory)'
+      displayName: 'Instalar Dependencias'
+
+    - task: Npm@1
+      inputs:
+        command: 'run'
+        arguments: 'test'
+        workingDir: '$(System.DefaultWorkingDirectory)'
+      displayName: 'Ejecutar Tests'
+
+    - task: Npm@1
+      inputs:
+        command: 'run'
+        arguments: 'build'
+        workingDir: '$(System.DefaultWorkingDirectory)'
+      displayName: 'Construir Aplicación'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: '$(System.DefaultWorkingDirectory)/build'
+        artifactName: 'drop'
+      displayName: 'Publicar Artefactos'
+
+- stage: Deploy
+  displayName: 'Despliegue'
+  dependsOn: Build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - deployment: Deploy
+    displayName: 'Desplegar a Producción'
+    environment: 'production'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: CopyFiles@2
+            inputs:
+              sourceFolder: '$(Pipeline.Workspace)/drop'
+              targetFolder: '$(System.DefaultWorkingDirectory)/deploy'
+            displayName: 'Copiar Archivos'
+
+          - task: ArchiveFiles@2
+            inputs:
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/deploy'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/fin-track.zip'
+            displayName: 'Crear Archivo ZIP'
+
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathToPublish: '$(Build.ArtifactStagingDirectory)/fin-track.zip'
+              artifactName: 'deployment-package'
+            displayName: 'Publicar Paquete de Despliegue'
+

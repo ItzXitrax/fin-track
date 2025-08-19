@@ -1,10 +1,10 @@
-# 🚀 Fin Track – Control De Gastos
+# Fin Track – Control De Gastos
 
 Una aplicación moderna y elegante para el control de gastos e ingresos personales, desarrollada con React 18, TypeScript y Material-UI.
 
-## ✨ Características Destacadas
+## Características Destacadas
 
-### 🎨 **Interfaz de Usuario Mejorada**
+### **Interfaz de Usuario Mejorada**
 - **Diseño Material Design 3** con tema personalizado
 - **Gradientes y sombras** para una experiencia visual premium
 - **Animaciones suaves** con transiciones y efectos hover
@@ -12,14 +12,14 @@ Una aplicación moderna y elegante para el control de gastos e ingresos personal
 - **Tipografía Inter** para mejor legibilidad
 - **Paleta de colores** profesional y accesible
 
-### 🏠 **Página de Inicio Atractiva**
+### **Página de Inicio Atractiva**
 - **Pantalla de carga** con animación personalizada
 - **Logo animado** con gradiente y sombras
 - **Chips informativos** destacando características clave
 - **Botón de demo** para probar la aplicación
 - **Transiciones fluidas** entre formularios
 
-### 📊 **Dashboard Interactivo**
+### **Dashboard Interactivo**
 - **Tarjetas de resumen** con gradientes y iconos
 - **Gráficos interactivos** usando Recharts
 - **Estadísticas en tiempo real** del mes actual
@@ -27,7 +27,7 @@ Una aplicación moderna y elegante para el control de gastos e ingresos personal
 - **Tendencia mensual** con múltiples líneas de datos
 - **Estadísticas rápidas** para insights inmediatos
 
-### 🧭 **Navegación Inteligente**
+### **Navegación Inteligente**
 - **Sidebar moderno** con gradiente y branding
 - **Menú contextual** con descripciones
 - **Indicadores visuales** de página activa
@@ -35,28 +35,28 @@ Una aplicación moderna y elegante para el control de gastos e ingresos personal
 - **Notificaciones** con badges
 - **FAB móvil** para acciones rápidas
 
-### 💰 **Gestión de Transacciones**
+### **Gestión de Transacciones**
 - **Formularios intuitivos** con validación en tiempo real
 - **Categorización automática** con colores e iconos
 - **Filtros avanzados** por tipo, fecha y categoría
 - **Acciones rápidas** para editar y eliminar
 - **Vista de tabla** optimizada para datos financieros
 
-### 🏷️ **Sistema de Categorías**
+### **Sistema de Categorías**
 - **Categorías predefinidas** con iconos Material Design
 - **Colores personalizables** para identificación visual
 - **Gestión CRUD completa** para categorías personalizadas
 - **Iconos integrados** para mejor UX
 - **Validación de nombres** únicos
 
-### 📈 **Reportes y Análisis**
+### **Reportes y Análisis**
 - **Gráfico de pastel** para distribución de gastos
 - **Gráfico de líneas** para tendencias temporales
 - **Métricas clave** destacadas visualmente
 - **Exportación de datos** en múltiples formatos
 - **Importación segura** de datos existentes
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### **Frontend Core**
 - **React 18** - Biblioteca de interfaz de usuario
@@ -80,7 +80,7 @@ Una aplicación moderna y elegante para el control de gastos e ingresos personal
 - **Jest** - Testing unitario
 - **Cypress** - Testing E2E
 
-## 🚀 Instalación y Configuración
+## Instalación y Configuración
 
 ### **Requisitos Previos**
 - Node.js 16+ 
@@ -119,7 +119,7 @@ npm run format         # Formatear código
 npm run type-check     # Verificar tipos TypeScript
 ```
 
-## 🎯 Funcionalidades Principales
+## Funcionalidades Principales
 
 ### **1. Autenticación de Usuarios**
 - ✅ Registro de nuevos usuarios
@@ -154,7 +154,7 @@ npm run type-check     # Verificar tipos TypeScript
 - ✅ Backup automático en LocalStorage
 - ✅ Estadísticas de datos
 
-## 🎨 Guía de Estilos
+## Guía de Estilos
 
 ### **Paleta de Colores**
 ```css
@@ -186,7 +186,7 @@ Secondary Text: #637381 (Gris medio)
 - **Sombras**: Sistema de elevación personalizado
 - **Espaciado**: Sistema de espaciado consistente (8px base)
 
-## 📱 Responsive Design
+## Responsive Design
 
 ### **Breakpoints**
 - **xs**: 0px - 599px (Móviles)
@@ -201,7 +201,7 @@ Secondary Text: #637381 (Gris medio)
 - **Navegación optimizada** para touch
 - **Gráficos responsivos** que se adaptan al tamaño
 
-## 🔧 Configuración Avanzada
+## Configuración Avanzada
 
 ### **Variables de Entorno**
 ```bash
@@ -249,7 +249,7 @@ npm run test:e2e
 npm run test:coverage
 ```
 
-## 🚀 Despliegue
+## Despliegue
 
 ### **Build de Producción**
 ```bash
@@ -271,7 +271,7 @@ REACT_APP_ENVIRONMENT=production
 REACT_APP_API_URL=https://api.fintrack.com
 ```
 
-## 📊 Métricas de Rendimiento
+## Métricas de Rendimiento
 
 ### **Lighthouse Scores Objetivo**
 - **Performance**: 90+
@@ -286,7 +286,7 @@ REACT_APP_API_URL=https://api.fintrack.com
 - **Minificación** de CSS/JS
 - **Compresión** gzip/brotli
 
-## 🔒 Seguridad
+## Seguridad
 
 ### **Medidas Implementadas**
 - **Validación** en frontend y backend
@@ -295,7 +295,7 @@ REACT_APP_API_URL=https://api.fintrack.com
 - **Persistencia local** segura
 - **HTTPS** en producción
 
-## 🌟 Roadmap Futuro
+## Roadmap Futuro
 
 ### **Fase 2 (Q2 2024)**
 - [ ] **Sincronización en la nube**
@@ -315,7 +315,7 @@ REACT_APP_API_URL=https://api.fintrack.com
 - [ ] **Colaboración familiar**
 - [ ] **API pública**
 
-## 🤝 Contribución
+## Contribución
 
 ### **Cómo Contribuir**
 1. Fork el proyecto
@@ -330,26 +330,8 @@ REACT_APP_API_URL=https://api.fintrack.com
 - **TypeScript** para tipado
 - **Tests** para nuevas funcionalidades
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 📞 Soporte
-
-### **Canales de Soporte**
-- **Issues**: GitHub Issues
-- **Documentación**: README y Wiki
-- **Comunidad**: Discord/Slack (próximamente)
-
-### **Contacto del Equipo**
-- **Email**: support@fintrack.com
-- **Twitter**: @FinTrackApp
-- **LinkedIn**: Fin Track Team
-
----
-
-## 🎉 ¡Gracias por usar Fin Track!
+## ¡Gracias por usar Fin Track!
 
 **Fin Track** es más que una aplicación de control de gastos. Es tu compañero financiero personal, diseñado para ayudarte a tomar el control de tu dinero y alcanzar tus metas financieras.
 
-**¡Empieza tu viaje hacia la libertad financiera hoy mismo!** 🚀💰
+
